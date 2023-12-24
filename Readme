@@ -1,5 +1,8 @@
-// // To Run Prettier
-// npm run format
-
-// // To Start the Server
+// To Start the Server
 // npm rundev
+
+// To Convert ts to js 
+// npm run build
+
+// To Run Prettier
+// npm run format

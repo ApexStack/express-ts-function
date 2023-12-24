@@ -1,6 +1,8 @@
 import express, { Application } from "express";
-import HelloRoute from "./routes/hello.route";
-
+import { routes } from "./routes";
+import { errorMiddleWare } from "./middleware/error.middleware";
+import * as dotenv from 'dotenv';
+dotenv.config();
 class App {
   private app: Application;
 
@@ -16,7 +18,8 @@ class App {
   }
 
   private routes(): void {
-    this.app.use("/", HelloRoute);
+    this.app.use("/", routes);
+    this.app.use(errorMiddleWare);
   }
 
   public getApp(): Application {

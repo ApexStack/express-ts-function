@@ -1,5 +1,8 @@
-class HelloService {
-  static fetchData(): string {
+import { Service } from "typedi";
+
+@Service()
+export class HelloService {
+  fetchData(): string {
     return "Hello from the service";
   }
 }

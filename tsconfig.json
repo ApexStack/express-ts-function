@@ -13,7 +13,10 @@
     "baseUrl": "./src",
     "paths": {
       "*": ["types/*"]
-    }
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
