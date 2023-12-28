@@ -10,9 +10,12 @@
     "rootDir": "./src",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
+    "incremental": true,
     "paths": {
-      "*": ["types/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

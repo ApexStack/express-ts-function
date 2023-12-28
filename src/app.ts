@@ -2,7 +2,10 @@ import express, { Application } from "express";
 import { routes } from "./routes";
 import { errorMiddleWare } from "./middleware/error.middleware";
 import * as dotenv from 'dotenv';
+import "reflect-metadata"; // For Dependency Injection
+
 dotenv.config();
+
 class App {
   private app: Application;
 
@@ -27,4 +30,12 @@ class App {
   }
 }
 
-export default new App().getApp();
+const PORT = process.env.PORT || 3001;
+
+const appInstance = new App();
+const app = appInstance.getApp();
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
