@@ -1,8 +1,8 @@
 import express from "express";
-import HelloController from '../controllers/hello.controller';
+import { getHello } from "../controllers/hello.controller";
 
 const router = express.Router();
 
-router.get("/", HelloController.get);
+router.get("/", getHello);
 
 export default router;

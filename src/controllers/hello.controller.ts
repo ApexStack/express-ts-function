@@ -1,12 +1,9 @@
 import { Request, Response } from "express";
-import HelloService from "../services/hello.service";
-import { Container } from "typedi";
+import { fetchData } from "../services/hello.service";
 
-class HelloController {
-  static get(req: Request, res: Response): void {
-    const data = Container.get(HelloService).fetchData();
-    res.json({ message: `${data}` });
-  }
-}
+const getHello = (req: Request, res: Response): void => {
+  const data = fetchData();
+  res.json({ message: data });
+};
 
-export default HelloController;
+export { getHello };
