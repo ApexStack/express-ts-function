@@ -1,4 +1,5 @@
 import express, { Application, json, urlencoded } from "express";
+import cors from "cors";
 import { routes } from "./routes";
 import { errorMiddleWare } from "./middleware/error.middleware";
 import * as dotenv from "dotenv";

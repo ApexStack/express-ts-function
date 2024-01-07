@@ -1,3 +1,3 @@
 export const fetchData = (): string => {
-  return "Hello from the service";
+  return "Hello from Reactive Forge";
 };
